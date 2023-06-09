@@ -22,7 +22,7 @@ const topVideos = [
 
 const Home = () => {
   return (
-    <div className="h-screen bg-svt">
+    <div className="min-h-screen bg-svt">
       <div className="container mx-auto text-white">
         <Header />
         <VideoList videos={topVideos} />
