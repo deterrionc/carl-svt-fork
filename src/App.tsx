@@ -1,11 +1,17 @@
-import React from 'react';
+import { Fragment } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Routing from './components/routing'
 import './App.css';
 
 const App = () => {
   return (
-    <div className='container'>
-      Tailwind
-    </div>
+    <Fragment>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/*' element={<Routing />} />
+        </Routes>
+      </BrowserRouter>
+    </Fragment>
   )
 }
 
