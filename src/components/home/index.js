@@ -14,7 +14,7 @@ const Home = () => {
     <div className="h-screen bg-svt">
       <div className="container mx-auto text-white">
         <Header />
-        <div className="flex justify-between py-3">
+        <div className="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 py-3">
           {topArticles.map((item, index) =>
             <div key={index} className="m-1 width-calc bg-article-card">
               <img alt="show1" src={item.image} />

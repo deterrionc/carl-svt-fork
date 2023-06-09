@@ -5,7 +5,3 @@
 .bg-article-card {
   background-color: rgb(33, 29, 27);
 }
-
-.width-calc {
-  width: calc(16.6667%);
-}
