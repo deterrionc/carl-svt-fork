@@ -1,6 +1,6 @@
 const Article = ({ article }) => {
   return (
-    <div className="m-1 width-calc bg-article-card">
+    <div className="m-1 width-calc bg-article-card rounded overflow-hidden">
       <img alt={article.tag} src={article.image} />
       <div className="p-2">
         <div className="text-base">{article.tag}</div>

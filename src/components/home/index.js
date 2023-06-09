@@ -12,10 +12,10 @@ const topArticles = [
 ]
 
 const topVideos = [
-  { image: "/assets/img/video-list-1.jpg", title: "Expert: Bara en explosion kan ha orsakat kollapsen" },
-  { image: "/assets/img/video-list-2.jpg", title: "Se forordelsen efter dammkollapsen i Ukraina" },
-  { image: "/assets/img/video-list-3.jpg", title: "Mats Knutson: Fortsatt kris for KD och L" },
-  { image: "/assets/img/video-list-4.jpg", title: "Darfor ska du skippa junisemesten" },
+  { image: "/assets/img/video-list-1.jpg", title: "Farewell and onion planting" },
+  { image: "/assets/img/video-list-2.jpg", title: "Season 1 - Episode 1" },
+  { image: "/assets/img/video-list-3.jpg", title: "Trailer: Premier Leagure: Battle Giant" },
+  { image: "/assets/img/video-list-4.jpg", title: "The first Swedes" },
   { image: "/assets/img/video-list-5.jpg", title: "30 minuter Lotta Edholm" },
   { image: "/assets/img/video-list-6.jpg", title: "Julia Kalthoff Hemmakultur - Konst" },
 ]
