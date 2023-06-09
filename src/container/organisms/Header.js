@@ -1,4 +1,4 @@
-import Logo from "../container/Logo"
+import Logo from "../atoms/Logo"
 
 const Header = () => {
   return (

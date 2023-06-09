@@ -1,4 +1,6 @@
-import Header from "../../container/Header"
+import Header from "../../container/organisms/Header"
+import ArticleList from "../../container/organisms/ArticleList"
+import VideoList from "../../container/organisms/VideoList"
 
 const topArticles = [
   { image: "/assets/img/card-list-1.jpg", tag: "svt news", title: "So the battles can be affected by the dust collapse", description: "This is War of the Week - delving into the lastest in the war in Ukraine" },
@@ -9,23 +11,22 @@ const topArticles = [
   { image: "/assets/img/card-list-6.jpg", tag: "lastest news", title: "The morning studio", description: "Today's most important news and analysis with frequent updates" },
 ]
 
+const topVideos = [
+  { image: "/assets/img/video-list-1.jpg", title: "Expert: Bara en explosion kan ha orsakat kollapsen" },
+  { image: "/assets/img/video-list-2.jpg", title: "Se forordelsen efter dammkollapsen i Ukraina" },
+  { image: "/assets/img/video-list-3.jpg", title: "Mats Knutson: Fortsatt kris for KD och L" },
+  { image: "/assets/img/video-list-4.jpg", title: "Darfor ska du skippa junisemesten" },
+  { image: "/assets/img/video-list-5.jpg", title: "30 minuter Lotta Edholm" },
+  { image: "/assets/img/video-list-6.jpg", title: "Julia Kalthoff Hemmakultur - Konst" },
+]
+
 const Home = () => {
   return (
     <div className="h-screen bg-svt">
       <div className="container mx-auto text-white">
         <Header />
-        <div className="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 py-3">
-          {topArticles.map((item, index) =>
-            <div key={index} className="m-1 width-calc bg-article-card">
-              <img alt="show1" src={item.image} />
-              <div className="p-2">
-                <div className="text-base">{item.tag}</div>
-                <h4 className="text-xl font-bold leading-6">{item.title}</h4>
-                <div className="text-xs pt-2">{item.description}</div>
-              </div>
-            </div>
-          )}
-        </div>
+        <VideoList videos={topVideos} />
+        <ArticleList articles={topArticles} />
       </div>
     </div>
   )
