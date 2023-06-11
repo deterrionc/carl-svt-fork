@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Video from "../molecules/Video"
 import { FaIcon } from "../atoms/FaIcon"
+import { Link } from "react-router-dom"
 
 const VideoList = ({ videos }) => {
   const [_videos, setVideos] = useState([])
@@ -11,8 +12,10 @@ const VideoList = ({ videos }) => {
 
   return (
     <div className="py-3">
-      <h5 className="m-1 pb-3 text-lg font-bold leading-6">Videos <FaIcon iconName="fa-arrow-right" /></h5>
-      <div className="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+      <Link to='/videos'>
+        <h5 className="m-1 pb-3 text-lg font-bold leading-6">Videos <FaIcon iconName="fa-arrow-right" /></h5>
+      </Link>
+      <div className="grid grid-cols-6 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {_videos.length && _videos.map((video, index) =>
           <Video key={index} video={video} />
         )}
