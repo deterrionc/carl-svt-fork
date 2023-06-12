@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom"
 import { FaIcon } from "../../../../container/atoms/FaIcon"
 import Header from "../../../../container/organisms/Header"
+import { useParams } from "react-router-dom"
+import tempData from '../../../../utils/temp.json'
 
-const VideoRoom = ({ match }) => {
-  console.log(match)
+const VideoRoom = () => {
+  const params = useParams()
+  const videoID = params.id
+  const videoItem = tempData.videos.find(video => video.id === videoID)
+
   return (
     <div className="min-h-screen bg-svt">
       <div className="container mx-auto text-white">
@@ -14,7 +19,7 @@ const VideoRoom = ({ match }) => {
           </Link>
 
           <video className="min-w-full" autoPlay controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            <source src={videoItem.file} type="video/mp4" />
           </video>
         </div>
       </div>
